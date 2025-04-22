@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Interactivo</title>
+
+  <!-- Enlaza tu hoja de estilos principal -->
+  <link rel="stylesheet" href="css/sb-admin-2.css" />
+  <link rel="stylesheet" href="css/sb-admin-2.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+
+<body>
+  <!-- =======================
+       1. ENCABEZADO (Panel de KPIs)
+  ======================== -->
+  <header id="kpi-panel">
+    <h1>Panel de KPIs</h1>
+    <!-- Aquí podrías insertar tarjetas o indicadores clave (KPI) -->
+  </header>
+
+  <!-- =======================
+       2. CONTENEDOR PRINCIPAL 
+          (Serie Temporal, Módulo 2, Módulo Mapa)
+  ======================== -->
+  <main id="main-container">
+    <div class="row">
+      <!-- 2.1. Módulo de Serie Temporal -->
+      <section id="modulo-serie-temporal">
+        <h2>Módulo de Serie Temporal</h2>
+        <!-- Botones de diario/mensual, tu gráfico con D3, etc. -->
+        <div id="opciones-frecuencia">
+          <button id="btn-diaria" class="btn btn-primary">Diaria</button>
+          <button id="btn-mensual" class="btn btn-primary">Mensual</button>
+        </div>
+        <div id="grafico-serie-temporal">
+          <!-- D3 insertará aquí la serie temporal -->
+        </div>
+      </section>
+    </div>
+
+    <div class="row">
+      <!-- 2.2. Módulo 2 -->
+      <section id="modulo-2">
+        <h2>Módulo 2</h2>
+        <div id="map"></div>
+        <div id="tooltip=" class="tooltip"></div>
+
+      </section>
+    </div>
+
+    <div class="row">
+      <!-- 2.3. Módulo del Mapa -->
+      <section id="modulo-mapa">
+        <h2>Módulo del Mapa</h2>
+        <!-- Aquí irán las visualizaciones de mapa, por ejemplo con Leaflet o D3 -->
+      </section>
+    </div>
+  </main>
+  <!-- =======================
+       SCRIPTS
+  ======================== -->
+  <!-- Carga de la librería D3 (o las que necesites) -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Scripts de tus módulos -->
+  <script src="js/serieTemporal.js"></script>
+  <script type="module" src="js/modulo2.js"></script>
+  <!-- Podrías tener otros scripts para tu Módulo 2 o el Mapa -->
+</body>
+
+</html>

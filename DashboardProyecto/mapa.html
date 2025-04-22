@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mapa de Ventas por Ciudad</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    #map {
+      height: 600px;
+      width: 100%;
+    }
+    .tooltip {
+      position: absolute;
+      background: white;
+      border: 1px solid #ccc;
+      padding: 6px;
+      font-size: 13px;
+      pointer-events: none;
+      display: none;
+    }
+  </style>
+
+</head>
+<body>
+
+
+
+  <div id="map"></div>
+  <div id="tooltip" class="tooltip"></div>
+
+  <!-- Librerías -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!-- Tu script -->
+  <script type="module" src="js/modulo2.js"></script>
+</body>
+</html>
